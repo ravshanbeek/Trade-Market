@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="3.1.22" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.6" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.6" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.6" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.6" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.6" />
+	  <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Interfaces\**" />
+    <Compile Remove="Data\Repositories\**" />
+    <Compile Remove="Repositories\Repository.cs" />
+    <Compile Remove="Repositories\UnitOfWork.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Data\Interfaces\**" />
+    <EmbeddedResource Remove="Data\Repositories\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Data\Interfaces\**" />
+    <None Remove="Data\Repositories\**" />
+  </ItemGroup>
+
+
+</Project>
